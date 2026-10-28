@@ -1,3 +1,7 @@
+> [!NOTE]
+> **Upstream Fork Notice:** This repository is an upstream tracking fork of **[LearnHouse](https://github.com/learnhouse/learnhouse)** (AGPL-3.0), preserved for open-source exploration, architecture evaluation, and dependency tracking.
+> For the customized, single-organization, Gemini AI-integrated implementation snapshot, refer to **prabodh-lms-private**.
+
 <p align="center">
   <a href="https://learnhouse.app">
     <img src=".github/images/learnhouse-github.png" alt="LearnHouse" width="600" />
