@@ -1,146 +1,169 @@
-> [!NOTE]
-> **Upstream Fork Notice:** This repository is an upstream tracking fork of **[LearnHouse](https://github.com/learnhouse/learnhouse)** (AGPL-3.0), preserved for open-source exploration, architecture evaluation, and dependency tracking.
-> For the customized, single-organization, Gemini AI-integrated implementation snapshot, refer to **prabodh-lms-private**.
+# Prabodh
 
 <p align="center">
-  <a href="https://learnhouse.app">
-    <img src=".github/images/learnhouse-github.png" alt="LearnHouse" width="600" />
-  </a>
-</p>
-
-<h3 align="center">The next-gen open-source platform for world-class educational content.</h3>
-
-<p align="center">
-  <a href="https://github.com/learnhouse/learnhouse/blob/main/LICENSE"><img src="https://img.shields.io/github/license/learnhouse/learnhouse?style=flat&color=blue" alt="License" /></a>
-  <a href="https://github.com/learnhouse/learnhouse/stargazers"><img src="https://img.shields.io/github/stars/learnhouse/learnhouse?style=flat" alt="Stars" /></a>
-  <a href="https://www.npmjs.com/package/learnhouse"><img src="https://img.shields.io/npm/v/learnhouse?style=flat&label=cli" alt="CLI Version" /></a>
-  <a href="https://app.codecov.io/gh/learnhouse/learnhouse"><img src="https://img.shields.io/codecov/c/github/learnhouse/learnhouse?flag=api&label=api%20coverage" alt="API Coverage" /></a>
-  <a href="https://github.com/learnhouse/learnhouse/commits"><img src="https://img.shields.io/github/last-commit/learnhouse/learnhouse?style=flat&label=last%20commit" alt="Last Commit" /></a>
-  <a href="https://github.com/learnhouse/learnhouse/issues"><img src="https://img.shields.io/github/issues/learnhouse/learnhouse?style=flat" alt="Issues" /></a>
-  <a href="https://github.com/learnhouse/learnhouse/pulls"><img src="https://img.shields.io/github/issues-pr/learnhouse/learnhouse?style=flat&label=PRs" alt="Pull Requests" /></a>
+  <strong>Enterprise Learning Management Platform & Multi-Provider AI Architecture</strong><br>
+  <em>White-labelled single-tenant LMS based on LearnHouse (AGPL-3.0), featuring FastAPI backend services, pgvector semantic search, Next.js App Router frontend, and Google Gemini / Claude AI copilot.</em>
 </p>
 
 <p align="center">
-📖 <b>Courses</b> — Create and manage courses with ease<br>
-✏️ <b>Editor</b> — Powerful block-based Notion-like content editor<br>
-📦 <b>Collections</b> — Organize courses into curated bundles<br>
-📝 <b>Assignments</b> — Create tasks and track student submissions<br>
-💬 <b>Discussions</b> — Community forums for your learners<br>
-🎙️ <b>Podcasts</b> — Audio content for on-the-go learning<br>
-📊 <b>Analytics</b> — Track engagement and course performance<br>
-🧊 <b>Playgrounds</b> — AI-generated interactive elements, simulations & diagrams<br>
-💻 <b>Code</b> — Real code execution with auto-grading in 30+ languages<br>
-📋 <b>Boards</b> — Real-time collaborative whiteboards<br>
-🧠 <b>AI</b> — Context-aware AI for learning & teaching<br>
-🎓 <b>Certificates</b> — Auto-generate certificates on course completion<br>
-👥 <b>User Groups</b> — Organize learners and control access<br>
-🔍 <b>SEO</b> — Built-in SEO optimization with metadata, sitemaps & open graph<br>
-🎨 <b>Customization</b> — Custom branding, landing pages & theming<br>
-💳 <b>Payments (Enterprise)</b> — Sell courses with no fees and no lock-in<br>
-🔐 <b>SSO (Enterprise)</b> — Single sign-on with OAuth providers<br>
-🏢 <b>Multi-Org (Enterprise)</b> — Run multiple organizations from a single instance<br>
+  <img src="https://img.shields.io/badge/Platform-LearnHouse%20(AGPL--3.0)-blue?style=for-the-badge" alt="Platform">
+  <img src="https://img.shields.io/badge/Frontend-Next.js%20(App%20Router)-black?style=for-the-badge&logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/Backend-FastAPI%20%2B%20Python-009688?style=for-the-badge&logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL%20%2B%20pgvector-336791?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
+  <img src="https://img.shields.io/badge/AI_Layer-Google%20Gemini%20%2F%20Claude-orange?style=for-the-badge&logo=google" alt="AI Engine">
+  <img src="https://img.shields.io/badge/Status-Private%20Handoff%20Snapshot-yellow?style=for-the-badge" alt="Status">
 </p>
 
-## 🚀 Get Started
+---
 
-LearnHouse has an official CLI that handles everything — self-hosting, updates, backups, and local development.
+## Overview
 
-### Self-host
+**Prabodh** is an enterprise-grade, single-organization learning management platform developed upon the open-source [LearnHouse](https://github.com/learnhouse/learnhouse) foundation (AGPL-3.0). This repository houses the verified enterprise white-labelling transformations, single-tenant middleware rewrites, cryptographic certificate verification engine, and provider-agnostic AI copilot extensions (powered by **Google Gemini** and **Anthropic Claude** via **Pydantic AI**).
 
-```bash
-npx learnhouse@latest setup
+Unlike generic multi-tenant SaaS platforms that leak organization metadata or impose rigid external brand marks, Prabodh enforces strict institutional boundaries: multi-org UI pickers are suppressed via proxy middleware, vector-embedded RAG retrieval is isolated per course, and automated course authoring tools accelerate institutional curriculum delivery.
+
+---
+
+## The Enterprise LMS Deployment Bottleneck & The Prabodh Solution
+
+### The Challenge
+- **Multi-Tenant Leakage & Administrative Overhead:** Generic open-source LMS deployments force complex multi-organization schemas onto institutions that require a dedicated, single-organization portal without confusing workspace switchers.
+- **Embedded Upstream Logo Leaks:** Surface-level CSS tweaks often leave hardcoded vector paths, favicon leaks, and third-party attribution across transactional emails and error screens.
+- **Speculative, Costly AI Integrations:** Directly wiring third-party AI APIs without token quotas or refund-on-failure handling leads to runaway cloud bills and broken student chat interfaces.
+- **Manual Certificate Verification:** Academic institutions lack automated, tamper-evident certificate issuance pipelines that allow employers to verify completion credentials via public QR tokens.
+
+### The Prabodh Solution
+- **Strict Single-Tenancy Proxy Routing:** Middleware (`apps/web/proxy.ts`) dynamically rewrites routes under `LEARNHOUSE_TENANCY=single`, cleanly masking multi-org switchers and locking tenancy to the host institution.
+- **Complete Vector Asset Rebranding:** Systematically re-branded authentication flows, learner dashboards, course player navigation, and certificate modals with audited SVG vectors.
+- **Pydantic AI Abstraction Layer:** Dual-engine architecture supporting both **Google Gemini** (for zero-cost development and high-throughput evaluation) and **Anthropic Claude**, guarded by token quotas and credit reservation gates.
+- **Cryptographic PDF Certificate Verification:** Branded, byte-verified PDF issuance tied to public validation endpoints (`/verify/[certificateId]`).
+
+---
+
+## Architecture & System Topology
+
+```mermaid
+flowchart TD
+    subgraph Client["Frontend Layer (Next.js App Router & Tailwind CSS)"]
+        Landing["Public Config-Driven Landing Page"]
+        StudentUI["Learner Dashboard & Course Player"]
+        CopilotUI["AI Copilot & Assistant Surface"]
+        AdminUI["Single-Org Course Creator & Management Desk"]
+    end
+
+    subgraph Middleware["Routing & Tenancy Middleware"]
+        Proxy["proxy.ts Middleware<br/>(LEARNHOUSE_TENANCY=single rewrite)"]
+    end
+
+    subgraph BackendAPI["Backend Services (FastAPI + SQLModel)"]
+        APICore["FastAPI Application Services"]
+        VectorDB["pgvector Embedding Store<br/>(Course RAG & Retrieval)"]
+        Redis["Redis Cache & Rate Limiter<br/>(Sessions & Token Bucket)"]
+    end
+
+    subgraph AIServices["Provider-Agnostic AI Layer (Pydantic AI)"]
+        Provider["provider.py (Gemini / Claude Dispatcher)"]
+        RAG["RAG Grounded Q&A"]
+        GenCourse["AI Course & Activity Creator"]
+        Audio["Text-to-Speech Audio Generator"]
+    end
+
+    Client --> Middleware
+    Middleware --> BackendAPI
+    BackendAPI --> VectorDB
+    BackendAPI --> Redis
+    BackendAPI --> AIServices
 ```
 
-The setup wizard walks you through domain, database, admin account, and optional features. Once done, it generates all config files and starts your instance.
+---
 
-```bash
-npx learnhouse start       # Start services
-npx learnhouse stop        # Stop services
-npx learnhouse update      # Update to latest version
-npx learnhouse logs        # Stream logs
-npx learnhouse backup      # Backup database
-npx learnhouse doctor      # Diagnose issues
+## Core Implemented Capabilities
+
+### 1. Enterprise White-Labelling (`apps/web`)
+- **Systematic Asset Sanitization:** Rebranded all authentication screens, student portals, course player viewports, and transactional pages. Vector path inspection eliminated legacy brand footprints.
+- **Single-Tenancy Routing Enforcement:** Rewrote routing via `proxy.ts` to enforce a unified single-org experience without multi-tenant clutter.
+- **Digital Certificate Verification:** Automated generation of tamper-evident PDF certificates and public verification route `/verify/[certificateId]`.
+
+### 2. Multi-Provider AI Architecture (`apps/api`)
+- **Pydantic AI LLM Integration:** Abstracted AI foundation (`provider.py`) seamlessly routing between **Google Gemini** and **Anthropic Claude**.
+- **pgvector Semantic Course RAG:** Encodes course reading materials and lecture transcripts into high-dimensional vector embeddings, grounding AI copilot answers directly in lesson sources.
+- **Automated Curriculum Authoring:** Generates structured syllabus hierarchies, interactive quizzes, flashcards, and hands-on programming activities.
+- **Cost Quota Protection:** Enforces token usage caps and automated credit refund mechanisms on interrupted network calls.
+
+---
+
+## Technology Stack
+
+Verified directly from source code and package configurations:
+
+| Component | Technology | Description |
+|---|---|---|
+| **Frontend Framework** | Next.js (App Router), React 18, TypeScript | Single-tenant routing with dynamic server-side rendering |
+| **Backend Services** | FastAPI, Python 3.11+, SQLModel | High-performance asynchronous REST API architecture |
+| **Relational Database** | PostgreSQL 16 + `pgvector` | ACID relational storage with integrated vector semantic embeddings |
+| **Cache & Queues** | Redis 7.x | Token-bucket rate limiting, session storage, and event messaging |
+| **AI Layer** | Pydantic AI, Google Gemini API, Anthropic Claude | Strict typed agentic interfaces with fallback routing |
+| **Styling** | Tailwind CSS | Institutional modern design tokens and dark/light mode support |
+
+---
+
+## Repository & Directory Structure
+
+```text
+prabodh-lms-private/
+├── apps/
+│   ├── api/                  # FastAPI backend, SQLModel entities, and Pydantic AI services
+│   ├── web/                  # Next.js frontend application with single-tenant proxying
+│   ├── collab/               # Real-time document collaboration microservice
+│   └── e2e/                  # Playwright end-to-end test definitions
+├── docs/
+│   └── prabodh/              # Exhaustive implementation & verification logs
+│       ├── TEAM_HANDOFF.md   # Single master handoff guide for engineering review
+│       ├── part2-gemini-provider.md # Detailed Gemini integration audit
+│       ├── frontend-branding.md     # Screen-by-screen rebranding ledger
+│       └── frontend-verification.md # Live manual and automated verification logs
+├── docker/                   # Docker Compose configurations (Postgres, Redis)
+└── config/                   # System runtime YAML configuration templates
 ```
 
-### Development
+---
 
+## Local Development Setup
+
+### Prerequisites
+- **Node.js 18+** & [`bun`](https://bun.sh)
+- **Python 3.11+** & [`poetry`](https://python-poetry.org/)
+- **Docker & Docker Compose**
+
+### 1. Start Infrastructure Containers
 ```bash
-git clone https://github.com/learnhouse/learnhouse.git
-cd learnhouse
-npx learnhouse dev
+docker compose -f docker/docker-compose.yml up -d
 ```
 
-This spins up PostgreSQL and Redis, installs dependencies, and starts the API, Web, and Collab servers with hot reload.
-
-> See the full [CLI documentation](apps/cli/README.md) for all commands and options.
-
-## 🛠️ Tech Stack
-
-<p align="center">
-<a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-000?style=flat&logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
-<a href="https://react.dev"><img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" alt="React" /></a>
-<a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript" /></a>
-<a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white" alt="TailwindCSS" /></a>
-<a href="https://www.radix-ui.com"><img src="https://img.shields.io/badge/Radix_UI-161618?style=flat&logo=radixui&logoColor=white" alt="Radix UI" /></a>
-<a href="https://tiptap.dev"><img src="https://img.shields.io/badge/Tiptap-1a1a2e?style=flat&logoColor=white" alt="Tiptap" /></a>
-<a href="https://codemirror.net"><img src="https://img.shields.io/badge/CodeMirror-D30707?style=flat&logo=codemirror&logoColor=white" alt="CodeMirror" /></a>
-<a href="https://yjs.dev"><img src="https://img.shields.io/badge/Yjs-6EEB83?style=flat&logoColor=black" alt="Yjs" /></a>
-<a href="https://fastapi.tiangolo.com"><img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
-<a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" /></a>
-<a href="https://www.postgresql.org"><img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" /></a>
-<a href="https://redis.io"><img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" alt="Redis" /></a>
-<a href="https://www.docker.com"><img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" /></a>
-<a href="https://stripe.com"><img src="https://img.shields.io/badge/Stripe-635BFF?style=flat&logo=stripe&logoColor=white" alt="Stripe" /></a>
-<a href="https://ai.google.dev"><img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white" alt="Gemini" /></a>
-<a href="https://www.llamaindex.ai"><img src="https://img.shields.io/badge/LlamaIndex-000?style=flat&logoColor=white" alt="LlamaIndex" /></a>
-<a href="https://aws.amazon.com/s3"><img src="https://img.shields.io/badge/AWS_S3-569A31?style=flat&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyTDIgN3YxMGwxMCA1IDEwLTVWN0wxMiAyem0wIDIuMThMMTkuMTggNyAxMiA5LjgyIDQuODIgNyAxMiA0LjE4ek00IDguNjRsNyAzLjVWMTkuNWwtNy0zLjVWOC42NHptMTAgMTAuODZWMTIuMTRsNy0zLjV2Ny4zNmwtNyAzLjV6Ii8+PC9zdmc+&logoColor=white" alt="AWS S3" /></a>
-<a href="https://www.tinybird.co"><img src="https://img.shields.io/badge/Tinybird-1A1A1A?style=flat&logoColor=white" alt="Tinybird" /></a>
-</p>
-
-## 📁 Project Structure
-
-| App | Path | Description | Technology | Used by |
-|-----|------|-------------|------------|---------|
-| **Web** | `apps/web` | Frontend application — dashboard, course player, editor, landing pages | Next.js, React, TailwindCSS, Tiptap | Teachers, Students, Admins |
-| **API** | `apps/api` | Backend REST API — auth, courses, payments, AI, analytics | FastAPI, Python, SQLModel, Alembic | Web, CLI, Collab |
-| **Collab** | `apps/collab` | Real-time collaboration server — live editing sync for courses & boards | Hocuspocus, Yjs, WebSocket | Web (editor, boards) |
-| **CLI** | `apps/cli` | Official CLI — setup wizard, dev environment, instance management | Commander, Node.js | Developers, Self-hosters |
-
-## 💬 Community
-
-- [Discord](https://discord.gg/CMyZjjYZ6x) — chat with the team and other users
-- [Documentation](https://docs.learnhouse.app) — guides and references
-
-## 🤝 Contributing
-
+### 2. Configure Environment Variables
+Copy template configs in both `apps/api` and `apps/web`:
 ```bash
-git clone https://github.com/learnhouse/learnhouse.git
-cd learnhouse
-npx learnhouse dev
+cp apps/api/.env.example apps/api/.env
+cp apps/web/.env.example apps/web/.env
 ```
 
-- [Contributing Guide](CONTRIBUTING.md)
-- [Submit a bug](https://github.com/learnhouse/learnhouse/issues/new?assignees=&labels=bug%2Ctriage&projects=&template=bug.yml&title=%5BBug%5D%3A+)
-- [Good first issues](https://github.com/learnhouse/learnhouse/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+### 3. Launch Development Services
+```bash
+# Terminal 1: Backend API
+cd apps/api
+poetry install
+poetry run uvicorn main:app --reload --port 8000
 
-## 🔒 Security
+# Terminal 2: Web Client
+cd apps/web
+bun install
+bun dev
+```
 
-We take the security of LearnHouse and the data entrusted to us seriously. If you discover a vulnerability, please email **security@learnhouse.app** — do not disclose it publicly until we've had a chance to investigate.
+---
 
-Please include a clear description, steps to reproduce, affected endpoints, and any relevant screenshots or proof-of-concept code. We will acknowledge your report, keep you informed, and credit you once resolved if you wish.
+## Upstream Attribution & License
 
-See our full [Security Policy](https://learnhouse.app/security) for details on our practices, scope, and responsible disclosure guidelines.
-
-## ✍️ Author & Maintainer
-
-Sweave (Badr B.) — [@swve](https://github.com/swve)
-
-## 💜 A Word
-
-LearnHouse is made with 💜, from the UI to the features it is carefully designed to make students and teachers lives easier and make education software more enjoyable.
-
-Thank you and have fun using/developing/testing LearnHouse !
-
-## 📄 License
-
-[AGPL-3.0](LICENSE) — Enterprise features are available under a separate Enterprise License.
+- **Upstream Project:** Built on [LearnHouse](https://github.com/learnhouse/learnhouse), licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+- **Enterprise Extensions:** Custom single-tenant proxying, Gemini AI provider integrations, and white-labelling authored by **Swaraj Ingale** ([@Swaraj0160](https://github.com/Swaraj0160)).
+- **Documentation:** Full technical specifications and architecture ledgers are maintained in [`docs/prabodh/`](docs/prabodh/).
